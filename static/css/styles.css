@@ -1,0 +1,14 @@
+body {
+	background: #ccc;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.message,
+.alert-success,
+.alert{
+	padding: 20px;
+	background: #1f7e58;
+	color: white;
+	text-align: center;
+	margin-bottom: 10px;
+}

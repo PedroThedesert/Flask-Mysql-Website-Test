@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="es">
+	<head>
+		<meta charset="utf-8"/>
+		<title>{% block title %} Flask {% endblock %} </title> | 2021
+		<link rel ="stylesheet" href="{{url_for('static', filename='css/styles2.css') }}" />
+	</head>
+	<body style="background-color:red;">
+		<header>
+			<div id="logotipo">
+				<!-- Logo Django -->
+				<img src="{{url_for('static', filename='img/flask.png') }}" />
+				<h1>Aprendiendo Hojas Estilos 2</h1>
+			</div>
+		</header>
+
+		<nav/>
+			<ul id="lista1">
+				<li>
+					<a href="/">Inicio</a>
+				</li>
+
+				<li>
+					<a href="{{ url_for('contacto') }}">Contacto</a>
+				</li>
+				<li>
+					<a href="{{ url_for('lenguajes') }}">Lenguajes</a>
+				</li>
+			</ul>
+		<nav/>
+		<div class="barra">>
+			<span class="esquina-izquierda"></span>
+			<span class="relleno-barra"></span>
+			<span class="esquina-derecha"></span>
+		<div class="box">
+			{% block content %}
+				<! -- Código que viene de templates -->
+				<strong>Contenido del bloque original</strong>
+			{% endblock %}
+		</div>
+		<footer>
+			Máster en Python de Pedro - {{now.month}} - {{now.year}}
+		</footer>
+	</body>
+
+</html>

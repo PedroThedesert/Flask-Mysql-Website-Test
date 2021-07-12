@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="es">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Aprendiendo Menus</title>
+	</head>
+	<body style="background-color:red;">
+		<h1>Aprendiendo Menus</h1>
+		<hr/>
+			<ul>
+				<li>
+					<a href="/">Inicio</a>
+				</li>
+
+				<li>
+					<a href="{{ url_for('contacto') }}">Contacto</a>
+				</li>
+				<li>
+					<a href="{{ url_for('lenguajes') }}">Lenguajes</a>
+				</li>
+			</ul>
+		<hr/>
+		<h1>Aprendiendo Flask</h1>
+		{{texto|safe}}
+		<h3>{{texto}}</h3>
+	</body>
+
+</html>

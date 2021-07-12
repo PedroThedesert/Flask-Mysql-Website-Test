@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="es">
+	<head>
+		<meta charset="utf-8"/>
+		<title>{% block title %} Flask {% endblock %} </title> | 2021
+		<link rel ="stylesheet" href="{{url_for('static', filename='css/styles.css') }}" />
+	</head>
+	<body style="background-color:red;">
+		<h1>Aprendiendo Menus</h1>
+		<hr/>
+			<ul>
+				<li>
+					<a href="/">Inicio</a>
+				</li>
+
+
+			</ul>
+		<hr/>
+		<section id="content">
+			{% block content %}
+			
+			{% endblock %}
+		</section>
+		
+		<footer>
+			Máster en Python de Pedro 
+		</footer>
+	</body>
+
+</html>

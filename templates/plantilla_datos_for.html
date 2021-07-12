@@ -1,0 +1,38 @@
+{% extends 'layout_reutilizacion_hoja_estilos.html' %}
+
+{% block title %}
+	Plantilla y Envio Datos
+{% endblock %}
+
+
+{% block content %}
+
+	<h1>Aprendiendo Flask</h1>
+	
+	{# Si es menor de 18 me ponga que soy menor de edad#}
+	{# Si es mayor de 18 me ponga que soy mayor de edad #}
+	
+	{% if edad >=18 and edad <=100 %}
+		<h2>Eres mayor de edad</h2>
+	{% elif edad >100 %}
+		<h2>Eres muy anciano</h2>
+	{% else %}
+		<h2>Eres menor de edad</h2>
+	{% endif %}
+	
+	<p>Tu edad es: {{edad}}</p>
+
+	<h2>Listado de Personas</h2>
+	{{personas}}
+	<ul>
+		{% for persona in personas %}
+			<li>{{loop.index}} . {{persona}}</li>
+		{% endfor %}
+	</ul>
+	{# 
+		Esto es 
+		un 
+		COMENTARIO 2 
+	#}
+	
+{% endblock %}
